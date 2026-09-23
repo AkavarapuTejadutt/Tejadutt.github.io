@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Akavarapu Teja Dutt - Information Technology Graduate (BE IT 2025, CBIT Hyderabad), Generative AI & ML Engineer, Full-Stack Developer, and Software Engineer based in Hyderabad.">
+  <meta name="keywords" content="Tejadutt, Akavarapu Teja Dutt, Generative AI, RAG, Machine Learning, Python, React.js, Software Engineer, Portfolio, Hyderabad">
+  <meta name="author" content="Akavarapu Teja Dutt">
+  <title>Akavarapu Teja Dutt | AI & Software Engineer</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Background Ambient Music Track -->
+  <audio id="bg-music" loop preload="auto" src="Anirudh_Ravichander_-_The_Paradise_Theme_OST_From_The_Paradise_(mp3.pm).mp3"></audio>
+
+  <!-- Overlay Canvas for Cinematic Dark Storm & Pleasant Light Bees Animations -->
+  <canvas id="anim-canvas"></canvas>
+  <div id="theme-flash-overlay"></div>
+  <div id="lightning-flash"></div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Header & Navigation -->
+  <header class="navbar-header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo">
+        <span class="logo-accent">&lt;</span>Akavarapu Teja Dutt<span class="logo-accent">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Ambient Music Toggle (The Paradise Theme OST) -->
+        <button id="music-toggle-btn" class="icon-btn" title="Toggle Ambient Music (Paradise Theme)" aria-label="Toggle Paradise Theme Music">
+          <i class="fa-solid fa-music" id="music-icon"></i>
+          <span class="btn-tooltip">Paradise Theme Music</span>
+        </button>
+
+        <!-- Sound FX Toggle -->
+        <button id="sound-toggle-btn" class="icon-btn" title="Toggle Sound FX" aria-label="Toggle Sound Effects">
+          <i class="fa-solid fa-volume-high" id="sound-icon"></i>
+          <span class="btn-tooltip">Sound FX ON</span>
+        </button>
+
+        <!-- Dynamic Theme Switcher Button -->
+        <button id="theme-switch-btn" class="theme-btn dark-mode-active" title="Switch Theme (Dark Storm / Pleasant Light Mode)" aria-label="Switch Light/Dark Theme">
+          <div class="theme-btn-content">
+            <span class="crow-badge" id="crow-icon-badge"><i class="fa-solid fa-cloud-bolt"></i> Dark Storm</span>
+            <span class="eagle-badge" id="eagle-icon-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Light Mode</span>
+          </div>
+        </button>
+
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle Mobile Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-glow"></div>
+      <div class="section-container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill hero-badge">
+            <span class="pulse-dot"></span> Available for Hiring • Fresh Graduate 2025 (BE IT, CBIT Hyderabad)
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Akavarapu Teja Dutt</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            I build <span id="typewriter-text" class="typewriter"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-description">
+            Information Technology graduate from <strong>Chaitanya Bharathi Institute of Technology (GPA 8.09)</strong> with hands-on experience in <strong>Python, Generative AI / RAG, PyTorch, React.js, SQL, & REST APIs</strong>. Experienced through web development & software R&D internships.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" id="hero-btn-projects">
+              <i class="fa-solid fa-rocket"></i> Explore Projects
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="hero-btn-contact">
+              <i class="fa-solid fa-envelope"></i> Contact Me
+            </a>
+          </div>
+
+          <!-- Hero Metric Badges -->
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-num">8.09</span>
+              <span class="metric-label">CGPA / 10 (CBIT)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">2</span>
+              <span class="metric-label">Internships (PlantDeck & CBIT R&D)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">6+</span>
+              <span class="metric-label">Key GitHub Repos (AI, ML, Web)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">3+</span>
+              <span class="metric-label">Certifications (NPTEL, UCSD, Infosys)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">WHO I AM</span>
+          <h2 class="section-title">Driven by Innovation & Engineering Excellence</h2>
+          <p class="section-subtitle">A fresher with real-world internship experience, ready to solve complex software and AI challenges.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card main-about">
+            <div class="card-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            <h3>Background & Focus</h3>
+            <p>
+              I recently graduated with a Bachelor of Engineering in Information Technology from <strong>Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad</strong>. My passion lies in building practical software systems that combine robust backend logic, responsive web interfaces, and modern Generative AI capabilities.
+            </p>
+            <p>
+              Whether it's developing Retrieval-Augmented Generation (RAG) pipelines for document intelligence, training deep learning models for biomedical signal classification, or crafting fluid React.js web platforms, I enjoy digging deep into data and code to engineer reliable solutions.
+            </p>
+            <div class="quick-facts">
+              <div class="fact-item"><i class="fa-solid fa-location-dot"></i> Hyderabad, Telangana, India</div>
+              <div class="fact-item"><i class="fa-solid fa-envelope"></i> akavaraputejadutt@gmail.com</div>
+              <div class="fact-item"><i class="fa-solid fa-phone"></i> +91 9866645151</div>
+              <div class="fact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/teja-dutt-akavarapu-b755a9249</div>
+            </div>
+          </div>
+
+          <div class="about-card highlight-card">
+            <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Core Competencies</h3>
+            <ul class="check-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Generative AI & LLMs:</strong> RAG architectures, prompt engineering, vector context retrieval.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Machine Learning:</strong> Python, PyTorch, Scikit-learn, MIT-BIH dataset processing & evaluation.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Full-Stack & Web:</strong> JavaScript, React.js, HTML5, CSS3, REST APIs, JSON data handling.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Databases & Tools:</strong> SQL, PostgreSQL, MySQL, Git/GitHub, VS Code, Power BI.</li>
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Software Quality:</strong> Functional testing, debugging, code validation, operational documentation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Showcase Section -->
+    <section id="projects" class="projects-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">MY WORK</span>
+          <h2 class="section-title">Featured GitHub Projects</h2>
+          <p class="section-subtitle">Deep-dive technical engineering projects built across Generative AI, Deep Learning, and Full-Stack Systems.</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: Math AI Tutor Agent (Featured) -->
+          <div class="project-card featured-project">
+            <div class="project-header">
+              <div class="project-title-row">
+                <div>
+                  <span class="project-type"><i class="fa-solid fa-square-root-variable"></i> AI & Agentic Systems</span>
+                  <h3 class="project-title">Math Tutor Agent – Step-by-Step AI Solver</h3>
+                </div>
+                <a href="https://github.com/AkavarapuTejadutt/Math_Agent" target="_blank" class="btn btn-outline btn-sm github-btn" title="View Source Code on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub Repository
+                </a>
+              </div>
+            </div>
+            <p class="project-description">
+              Engineered an AI-powered tutoring web application that delivers step-by-step mathematical solutions. Built with a <strong>FastAPI backend</strong> utilizing NLP and Machine Learning for query processing, paired with a modern <strong>React + TypeScript + Tailwind CSS frontend</strong>.
+            </p>
+            <div class="project-tech-stack">
+              <span>TypeScript</span><span>FastAPI</span><span>Python</span><span>NLP / ML</span><span>React</span><span>Tailwind CSS</span>
+            </div>
+            <div class="feature-bullets">
+              <div class="f-bullet"><i class="fa-solid fa-check"></i> Intelligent multi-step mathematical breakdown logic</div>
+              <div class="f-bullet"><i class="fa-solid fa-check"></i> RESTful API backend handling complex algebraic expressions</div>
+              <div class="f-bullet"><i class="fa-solid fa-check"></i> Interactive student-focused user interface</div>
+            </div>
+          </div>
+
+          <!-- Project 2: RAG AI Document Q&A -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-title-row">
+                <div>
+                  <span class="project-type"><i class="fa-solid fa-robot"></i> Generative AI & RAG</span>
+                  <h3 class="project-title">AI Document Q&A using RAG</h3>
+                </div>
+                <a href="https://github.com/AkavarapuTejadutt/AI-Document-QA-RAG" target="_blank" class="btn btn-outline btn-sm github-btn" title="View Source Code on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <p class="project-description">
+              Engineered a question-answering application using Python, LLM APIs, and Retrieval-Augmented Generation (RAG). Implemented text chunking, document vector indexing, and similarity search for contextually accurate responses.
+            </p>
+            <div class="project-tech-stack">
+              <span>Python</span><span>RAG</span><span>LLM APIs</span><span>Prompt Engineering</span><span>Vector Search</span>
+            </div>
+
+            <!-- Interactive RAG Sandbox Demo -->
+            <div class="interactive-sandbox" id="rag-sandbox">
+              <div class="sandbox-header">
+                <span><i class="fa-solid fa-terminal"></i> Interactive RAG Simulator</span>
+                <span class="status-indicator"><span class="dot green"></span> Context Indexed</span>
+              </div>
+              <div class="sandbox-messages" id="rag-chat-window">
+                <div class="msg system-msg">
+                  <i class="fa-solid fa-robot"></i> <strong>RAG Assistant:</strong> Loaded resume & technical documents into vector index. Select a sample prompt or type your query below!
+                </div>
+              </div>
+              <div class="sandbox-sample-queries">
+                <button class="sample-btn" data-query="What is Tejadutt's GPA and college?">GPA & Degree</button>
+                <button class="sample-btn" data-query="What did Teja do during his PlantDeck internship?">PlantDeck Work</button>
+                <button class="sample-btn" data-query="What skills does Tejadutt have in AI and ML?">AI/ML Skills</button>
+              </div>
+              <div class="sandbox-input-row">
+                <input type="text" id="rag-input" placeholder="Ask a question about Tejadutt's projects or background..." />
+                <button id="rag-send-btn" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i> Ask RAG</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: RNA-Seq Autoencoder Anomaly Detection -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-title-row">
+                <div>
+                  <span class="project-type"><i class="fa-solid fa-dna"></i> Deep Learning & Bioinformatics</span>
+                  <h3 class="project-title">RNA-Seq Autoencoder Anomaly Detector</h3>
+                </div>
+                <a href="https://github.com/AkavarapuTejadutt/RNA-Seq-Autoencoder-Detection" target="_blank" class="btn btn-outline btn-sm github-btn" title="View Source Code on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <p class="project-description">
+              Leveraged deep learning Autoencoders for anomaly detection in gene expression data (GSE183947). Tuned hyperparameters via <strong>GridSearchCV</strong>, evaluating reconstruction errors to achieve <strong>94.23% correct reconstructions</strong>.
+            </p>
+            <div class="project-tech-stack">
+              <span>Python</span><span>PyTorch</span><span>Autoencoders</span><span>GridSearchCV</span><span>Pandas</span><span>NumPy</span>
+            </div>
+            <div class="feature-bullets">
+              <div class="f-bullet"><i class="fa-solid fa-check"></i> High-dimensional genomic data preprocessing</div>
+              <div class="f-bullet"><i class="fa-solid fa-check"></i> Hyperparameter tuning for autoencoder latent space</div>
+              <div class="f-bullet"><i class="fa-solid fa-check"></i> 94.23% reconstruction accuracy</div>
+            </div>
+          </div>
+
+          <!-- Project 4: ECG Arrhythmia Classification System -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-title-row">
+                <div>
+                  <span class="project-type"><i class="fa-solid fa-heart-pulse"></i> Deep Learning / Healthcare</span>
+                  <h3 class="project-title">ECG Arrhythmia Classification System</h3>
+                </div>
+                <a href="https://github.com/AkavarapuTejadutt/ECG-Arrhythmia-Classification-Using-a-Robust-Deep-Learning-Approach" target="_blank" class="btn btn-outline btn-sm github-btn" title="View Source Code on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <p class="project-description">
+              Developed a machine learning and deep learning classification system using Python, PyTorch, and Scikit-learn on the MIT-BIH ECG arrhythmia dataset. Evaluated model precision, recall, and sensitivity metrics.
+            </p>
+            <div class="project-tech-stack">
+              <span>Python</span><span>PyTorch</span><span>Scikit-learn</span><span>MIT-BIH Dataset</span><span>Pandas</span>
+            </div>
+
+            <!-- ECG Visualizer Interactive Demo -->
+            <div class="ecg-visualizer" id="ecg-demo">
+              <div class="ecg-header">
+                <span><i class="fa-solid fa-wave-square"></i> Model Performance & Waveform</span>
+                <span class="accuracy-badge">Accuracy: 98.4%</span>
+              </div>
+              <div class="ecg-canvas-container">
+                <canvas id="ecg-canvas" height="90"></canvas>
+              </div>
+              <div class="ecg-stats-row">
+                <div class="ecg-stat"><span>Precision:</span> <strong>97.8%</strong></div>
+                <div class="ecg-stat"><span>Recall:</span> <strong>98.1%</strong></div>
+                <div class="ecg-stat"><span>F1-Score:</span> <strong>97.9%</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Network Traffic Anomaly Detection -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-title-row">
+                <div>
+                  <span class="project-type"><i class="fa-solid fa-shield-halved"></i> Cyber Security & ML</span>
+                  <h3 class="project-title">Network Traffic Cyber Anomaly Detector</h3>
+                </div>
+                <a href="https://github.com/AkavarapuTejadutt/Anomaly-Detection-in-Network-Traffic-Data" target="_blank" class="btn btn-outline btn-sm github-btn" title="View Source Code on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <p class="project-description">
+              Engineered a machine learning pipeline for detecting anomalous patterns and intrusion attempts in network traffic logs. Extracted feature metrics to classify normal vs malicious packet traffic.
+            </p>
+            <div class="project-tech-stack">
+              <span>Python</span><span>Scikit-learn</span><span>Security Analytics</span><span>Pandas</span><span>Data Cleaning</span>
+            </div>
+            <div class="feature-bullets">
+              <div class="f-bullet"><i class="fa-solid fa-check"></i> Network packet feature extraction & cleaning</div>
+              <div class="f-bullet"><i class="fa-solid fa-check"></i> Intrusion detection classifier model</div>
+            </div>
+          </div>
+
+          <!-- Project 6: Farmer-Centric E-Commerce Platform -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-title-row">
+                <div>
+                  <span class="project-type"><i class="fa-solid fa-shop"></i> Full-Stack Web</span>
+                  <h3 class="project-title">Farmer-Centric E-Commerce Platform</h3>
+                </div>
+                <a href="https://github.com/AkavarapuTejadutt/Farmer-ECommerce-Platform" target="_blank" class="btn btn-outline btn-sm github-btn" title="View Source Code on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+            <p class="project-description">
+              Developed a responsive web application enabling farmers to list agricultural produce directly and customers to browse, filter, and purchase items. Built reusable React components integrated with backend REST APIs.
+            </p>
+            <div class="project-tech-stack">
+              <span>JavaScript</span><span>React.js</span><span>REST APIs</span><span>HTML5/CSS3</span><span>JSON</span>
+            </div>
+            <div class="feature-bullets">
+              <div class="f-bullet"><i class="fa-solid fa-check"></i> Direct farmer product listing portal</div>
+              <div class="f-bullet"><i class="fa-solid fa-check"></i> REST API integration & testing</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" class="skills-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">TECH STACK</span>
+          <h2 class="section-title">Technical Skills & Tools</h2>
+          <p class="section-subtitle">A comprehensive breakdown of technologies I work with every day.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1 -->
+          <div class="skill-category-card">
+            <div class="cat-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Generative AI & ML</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-info"><span>LLM Concepts & Prompt Engineering</span><span>88%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Retrieval-Augmented Generation (RAG)</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Machine Learning & PyTorch</span><span>82%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 82%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Scikit-learn & Model Evaluation</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="skill-category-card">
+            <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Programming Languages</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-info"><span>Python</span><span>90%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>JavaScript (ES6+) / TypeScript</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>SQL (MySQL, PostgreSQL)</span><span>84%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 84%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Java</span><span>78%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 78%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="skill-category-card">
+            <div class="cat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Web & API Engineering</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-info"><span>React.js & FastAPI</span><span>84%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 84%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>RESTful APIs & JSON</span><span>88%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>HTML5 & CSS3 / Modern Styling</span><span>90%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Debugging & Software Testing</span><span>86%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 86%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="skill-category-card">
+            <div class="cat-icon"><i class="fa-solid fa-toolbox"></i></div>
+            <h3>Tools & Data Processing</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-info"><span>Git & GitHub</span><span>88%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Pandas & NumPy</span><span>85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Power BI & Data Visualization</span><span>80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>VS Code, Postman & Excel</span><span>90%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="timeline-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">CAREER PATH</span>
+          <h2 class="section-title">Internships & Education</h2>
+          <p class="section-subtitle">Proven experience across web engineering and software R&D.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-period">Oct 2024 – Jul 2025</span>
+                <span class="timeline-type">Internship</span>
+              </div>
+              <h3 class="timeline-role">Web Development Intern</h3>
+              <h4 class="timeline-company">PlantDeck Products and Services Pvt. Ltd. | Hyderabad, India</h4>
+              <ul class="timeline-bullets">
+                <li>Worked on web application development using <strong>JavaScript and React.js</strong>, connecting frontend UI with REST APIs.</li>
+                <li>Developed and improved responsive user interface features with focus on usability and cross-browser consistency.</li>
+                <li>Performed functional testing, debugging, and resolving application issues to maintain operational stability.</li>
+                <li>Utilized Git and GitHub for version control, code reviews, and team collaboration.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fa-solid fa-microchip"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-period">Jun 2024 – Aug 2024</span>
+                <span class="timeline-type">Internship</span>
+              </div>
+              <h3 class="timeline-role">Research & Development Engineer Intern</h3>
+              <h4 class="timeline-company">Chaitanya Bharathi Institute of Technology (CBIT) | Gandipet, Hyderabad</h4>
+              <ul class="timeline-bullets">
+                <li>Developed and tested software modules in Python as part of an institutional R&D project.</li>
+                <li>Assisted in functional validation and system performance testing under varying application scenarios.</li>
+                <li>Collaborated with research team members to troubleshoot bugs and improve overall software reliability.</li>
+                <li>Maintained thorough technical documentation of project testing results and system behaviors.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Education -->
+          <div class="timeline-item education-item" id="education">
+            <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-period">Dec 2021 – Jun 2025</span>
+                <span class="timeline-type">Graduation</span>
+              </div>
+              <h3 class="timeline-role">Bachelor of Engineering in Information Technology</h3>
+              <h4 class="timeline-company">Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad</h4>
+              <div class="gpa-pill"><i class="fa-solid fa-award"></i> CGPA: <strong>8.09 / 10</strong></div>
+              <p class="edu-desc">
+                Completed comprehensive coursework in Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems (DBMS), Software Engineering, Machine Learning, and Web Technologies.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Certifications Row -->
+        <div class="certifications-box">
+          <h3><i class="fa-solid fa-certificate"></i> Professional Certifications</h3>
+          <div class="certs-grid">
+            <div class="cert-card">
+              <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+              <div class="cert-info">
+                <h4>Python Programming Certification</h4>
+                <p>NPTEL (2022)</p>
+              </div>
+            </div>
+
+            <div class="cert-card">
+              <div class="cert-icon"><i class="fa-solid fa-diagram-project"></i></div>
+              <div class="cert-info">
+                <h4>Algorithmic Toolbox & Data Structures</h4>
+                <p>University of California San Diego / Coursera (2022–2023)</p>
+              </div>
+            </div>
+
+            <div class="cert-card">
+              <div class="cert-icon"><i class="fa-solid fa-laptop"></i></div>
+              <div class="cert-info">
+                <h4>Web Development & Software Engineering</h4>
+                <p>Infosys Springboard (2023)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Clean Direct Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">Direct Contact & Profiles</h2>
+          <p class="section-subtitle">Open for Full-Time Opportunities in Software Engineering, GenAI, Backend, & Full-Stack Development.</p>
+        </div>
+
+        <div class="contact-single-card">
+          <div class="contact-hero-content">
+            <div class="contact-avatar-icon"><i class="fa-solid fa-paper-plane"></i></div>
+            <h3>Akavarapu Teja Dutt</h3>
+            <p>Graduate Engineer (BE IT 2025, CBIT Hyderabad)</p>
+          </div>
+
+          <div class="contact-channels-grid">
+            <a href="mailto:akavaraputejadutt@gmail.com" class="channel-card">
+              <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="channel-info">
+                <span class="c-label">Official Email</span>
+                <span class="c-value">akavaraputejadutt@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="tel:+919866645151" class="channel-card">
+              <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="channel-info">
+                <span class="c-label">Phone Number</span>
+                <span class="c-value">+91 9866645151</span>
+              </div>
+            </a>
+
+            <div class="channel-card no-hover">
+              <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="channel-info">
+                <span class="c-label">Location</span>
+                <span class="c-value">Hyderabad, Telangana, India</span>
+              </div>
+            </div>
+
+            <a href="https://linkedin.com/in/teja-dutt-akavarapu-b755a9249" target="_blank" class="channel-card">
+              <div class="c-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div class="channel-info">
+                <span class="c-label">LinkedIn Profile</span>
+                <span class="c-value">teja-dutt-akavarapu</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/AkavarapuTejadutt" target="_blank" class="channel-card">
+              <div class="c-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="channel-info">
+                <span class="c-label">GitHub Repositories</span>
+                <span class="c-value">AkavarapuTejadutt</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-container footer-container">
+      <p>&copy; 2026 Akavarapu Teja Dutt. Information Technology Graduate, CBIT Hyderabad.</p>
+      <div class="footer-links">
+        <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="audio_effects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
