@@ -1,0 +1,177 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+
+\geometry{left=0.6in, top=0.5in, right=0.6in, bottom=0.5in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Akavarapu Teja Dutt} \\ \vspace{2pt}
+    \textbf{Software Engineering $\vert$ Quantitative Trading Systems $\vert$ Python} \\ \vspace{2pt}
+    \small Hyderabad, India $\vert$ +91 9866645151 $\vert$ \href{mailto:akavaraputejadutt@gmail.com}{akavaraputejadutt@gmail.com} \\ \vspace{2pt}
+    \href{https://linkedin.com/in/teja-dutt-akavarapu-b755a9249}{\faLinkedin\ LinkedIn} $\vert$
+    \href{https://github.com/AkavarapuTejadutt}{\faGithub\ GitHub} $\vert$
+    \href{https://akavaraputejadutt.github.io/}{\faGlobe\ Portfolio}
+\end{center}
+
+%-----------SUMMARY-----------
+\vspace{-8pt}
+\section{Summary}
+\small{
+Information Technology graduate with hands-on development experience across Python, algorithmic trading systems, machine learning, web applications, and APIs. Built production-grade projects involving quantitative trading engines (FYERS \& Angel One APIs), AI math tutoring systems, ECG classification, and anomaly detection. Strong expertise in financial WebSockets, risk-controlled execution, data preprocessing, and modular architecture. Seeking an entry-level Software Engineering or Quantitative Development role.
+}
+
+%-----------TECHNICAL SKILLS-----------
+\vspace{-4pt}
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Python, Java, JavaScript, TypeScript, SQL} \\
+     \textbf{Quantitative \& Trading Systems}{: FYERS API v3, Angel One SmartAPI, WebSocket Streaming, ORB Strategy, Risk Management} \\
+     \textbf{Machine Learning \& Data}{: PyTorch, Scikit-learn, Pandas, NumPy, Data Preprocessing, Model Evaluation, Anomaly Detection} \\
+     \textbf{Web \& API Engineering}{: React.js, FastAPI, RESTful APIs, HTML5, CSS3, JSON, Microservices} \\
+     \textbf{Core Concepts \& Tools}{: Data Structures \& Algorithms, OOP, DBMS, Git, GitHub, VS Code, Postman}
+    }}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\vspace{-6pt}
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Research \& Development Engineer Intern}{Jun 2024 -- Aug 2024}
+      {Chaitanya Bharathi Institute of Technology (CBIT)}{Hyderabad, India}
+      \resumeItemListStart
+        \resumeItem{Developed and validated software modules in Python for an institutional R\&D multi-modal system.}
+        \resumeItem{Investigated edge cases, tested algorithmic behavior across diverse inputs, and resolved logic bugs.}
+        \resumeItem{Documented functional validation outcomes, system performance benchmarks, and operational troubleshooting.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Web Development Intern}{Oct 2024 -- Jul 2025}
+      {PlantDeck Products and Services Pvt. Ltd.}{Hyderabad, India}
+      \resumeItemListStart
+        \resumeItem{Engineered responsive user interfaces and modular frontend components using JavaScript and React.js.}
+        \resumeItem{Integrated client-side UI with backend REST APIs; conducted cross-browser debugging and functional testing.}
+        \resumeItem{Participated in Git version control workflows and code reviews, improving UI reliability and performance.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SELECTED PROJECTS-----------
+\vspace{-6pt}
+\section{Selected Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {QuantORB -- Automated Quantitative Trading Framework}{Python, FYERS API v3, Angel One, WebSockets, Pandas}
+      \resumeItemListStart
+        \resumeItem{Architected a 24/7 automated quantitative trading engine executing the 5-minute Opening Range Breakout (ORB) strategy on Nifty 50 Futures and Equities with sub-second order dispatch.}
+        \resumeItem{Engineered dual-broker connectivity via FYERS API v3 and Angel One SmartAPI, processing live tick-by-tick WebSocket data with automated TOTP session authentication and token caching.}
+        \resumeItem{Implemented systematic risk management protocols: 1:4 dynamic Risk-to-Reward targets, prior-candle trailing stop loss, candle-close breakout validation (filtering false wicks), and automated 15:10 IST square-off.}
+        \resumeItem{Built dual-mode execution engines (real-time tick paper trading vs. live market execution) and a historical replay backtesting simulator (\texttt{replay.py}) with crash-resilient session recovery.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {Math Tutor Agent -- Step-by-Step AI Solver}{Python, FastAPI, React, TypeScript, Tailwind CSS}
+      \resumeItemListStart
+        \resumeItem{Built an AI-powered tutoring web application that parses complex mathematical queries and delivers step-by-step solutions.}
+        \resumeItem{Developed a high-performance FastAPI backend to process queries, paired with a modern React + TypeScript frontend.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {ECG Arrhythmia Classification System}{Python, PyTorch, Scikit-learn, MIT-BIH Dataset}
+      \resumeItemListStart
+        \resumeItem{Developed deep learning classification models (CNN-GRU \& TCN) on the MIT-BIH dataset with DWT preprocessing.}
+        \resumeItem{Achieved 98.98\% accuracy and 99.73\% sensitivity across 5 cardiac arrhythmia classifications.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {RNA-Seq Anomaly Detection}{Python, PyTorch Autoencoders, Scikit-learn, GSE183947}
+      \resumeItemListStart
+        \resumeItem{Constructed an unsupervised anomaly detection pipeline for high-dimensional genomic expression data.}
+        \resumeItem{Optimized latent space parameters via GridSearchCV, achieving 94.23\% reconstruction accuracy.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\vspace{-6pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chaitanya Bharathi Institute of Technology (CBIT)}{Hyderabad, India}
+      {Bachelor of Engineering in Information Technology (CGPA: 8.09 / 10)}{Dec 2021 -- Jun 2025}
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\vspace{-6pt}
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     $\bullet$ \textbf{Python Programming Certification} -- NPTEL (2022) \\
+     $\bullet$ \textbf{Algorithmic Toolbox \& Data Structures Specialization} -- UC San Diego, Coursera (2022--2023) \\
+     $\bullet$ \textbf{Web Development and Software Engineering} -- Infosys Springboard (2023)
+    }}
+\end{itemize}
+
+\end{document}

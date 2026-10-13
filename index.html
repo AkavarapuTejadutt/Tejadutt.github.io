@@ -17,11 +17,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css?v=vfx_cgx_3">
 </head>
 <body>
-  <!-- Background Ambient Music Track -->
-  <audio id="bg-music" loop preload="auto" src="Anirudh_Ravichander_-_The_Paradise_Theme_OST_From_The_Paradise_(mp3.pm).mp3"></audio>
 
   <!-- Overlay Canvas for Cinematic Dark Storm & Pleasant Light Bees Animations -->
   <canvas id="anim-canvas"></canvas>
@@ -47,23 +45,11 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Ambient Music Toggle (The Paradise Theme OST) -->
-        <button id="music-toggle-btn" class="icon-btn" title="Toggle Ambient Music (Paradise Theme)" aria-label="Toggle Paradise Theme Music">
-          <i class="fa-solid fa-music" id="music-icon"></i>
-          <span class="btn-tooltip">Paradise Theme Music</span>
-        </button>
-
-        <!-- Sound FX Toggle -->
-        <button id="sound-toggle-btn" class="icon-btn" title="Toggle Sound FX" aria-label="Toggle Sound Effects">
-          <i class="fa-solid fa-volume-high" id="sound-icon"></i>
-          <span class="btn-tooltip">Sound FX ON</span>
-        </button>
-
         <!-- Dynamic Theme Switcher Button -->
-        <button id="theme-switch-btn" class="theme-btn dark-mode-active" title="Switch Theme (Dark Storm / Pleasant Light Mode)" aria-label="Switch Light/Dark Theme">
+        <button id="theme-switch-btn" class="theme-btn dark-mode-active" title="Switch Theme (Dark Storm VFX / Cinematic Light)" aria-label="Switch Light/Dark Theme">
           <div class="theme-btn-content">
             <span class="crow-badge" id="crow-icon-badge"><i class="fa-solid fa-cloud-bolt"></i> Dark Storm</span>
-            <span class="eagle-badge" id="eagle-icon-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Light Mode</span>
+            <span class="eagle-badge" id="eagle-icon-badge"><i class="fa-solid fa-sun"></i> Daylight Mode</span>
           </div>
         </button>
 
@@ -81,7 +67,7 @@
       <div class="section-container hero-container">
         <div class="hero-content">
           <div class="badge-pill hero-badge">
-            <span class="pulse-dot"></span> Available for Hiring • Fresh Graduate 2025 (BE IT, CBIT Hyderabad)
+            <span class="pulse-dot"></span> Available for Opportunities • AI Systems & Quantitative Software Engineer
           </div>
           <h1 class="hero-title">
             Hi, I'm <span class="gradient-text">Akavarapu Teja Dutt</span>
@@ -90,12 +76,15 @@
             I build <span id="typewriter-text" class="typewriter"></span><span class="cursor">|</span>
           </h2>
           <p class="hero-description">
-            Information Technology graduate from <strong>Chaitanya Bharathi Institute of Technology (GPA 8.09)</strong> with hands-on experience in <strong>Python, Generative AI / RAG, PyTorch, React.js, SQL, & REST APIs</strong>. Experienced through web development & software R&D internships.
+            Information Technology graduate from <strong>Chaitanya Bharathi Institute of Technology (GPA 8.09)</strong> with hands-on experience in <strong>Python, Generative AI / RAG, Algorithmic Trading Systems, PyTorch, React.js, SQL, & REST APIs</strong>. Experienced through web development & software R&D internships.
           </p>
 
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn-primary" id="hero-btn-projects">
               <i class="fa-solid fa-rocket"></i> Explore Projects
+            </a>
+            <a href="Teja_resume.pdf" target="_blank" class="btn btn-outline" id="hero-btn-resume" title="View or Download Tejadutt's Resume PDF">
+              <i class="fa-solid fa-file-pdf"></i> Download Resume
             </a>
             <a href="#contact" class="btn btn-secondary" id="hero-btn-contact">
               <i class="fa-solid fa-envelope"></i> Contact Me
@@ -113,8 +102,8 @@
               <span class="metric-label">Internships (PlantDeck & CBIT R&D)</span>
             </div>
             <div class="metric-card">
-              <span class="metric-num">6+</span>
-              <span class="metric-label">Key GitHub Repos (AI, ML, Web)</span>
+              <span class="metric-num">7+</span>
+              <span class="metric-label">Key Repos (AI, ML, Quant)</span>
             </div>
             <div class="metric-card">
               <span class="metric-num">3+</span>
@@ -156,6 +145,7 @@
             <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
             <h3>Core Competencies</h3>
             <ul class="check-list">
+              <li><i class="fa-solid fa-circle-check"></i> <strong>Quantitative Finance & Algo Trading:</strong> FYERS API v3 & Angel One, WebSocket feeds, ORB strategy, risk management, event-driven engines.</li>
               <li><i class="fa-solid fa-circle-check"></i> <strong>Generative AI & LLMs:</strong> RAG architectures, prompt engineering, vector context retrieval.</li>
               <li><i class="fa-solid fa-circle-check"></i> <strong>Machine Learning:</strong> Python, PyTorch, Scikit-learn, MIT-BIH dataset processing & evaluation.</li>
               <li><i class="fa-solid fa-circle-check"></i> <strong>Full-Stack & Web:</strong> JavaScript, React.js, HTML5, CSS3, REST APIs, JSON data handling.</li>
@@ -178,8 +168,169 @@
 
         <div class="projects-grid">
           
-          <!-- Project 1: Math AI Tutor Agent (Featured) -->
-          <div class="project-card featured-project">
+          <!-- Project 0: QuantORB Framework (Flagship Featured Project) -->
+          <div class="project-card featured-project quantorb-featured-card">
+            <div class="quantorb-info-col">
+              <div class="project-header">
+                <div class="project-title-row">
+                  <div>
+                    <span class="project-type"><i class="fa-solid fa-chart-line"></i> Quantitative Finance & Algorithmic Trading</span>
+                    <h3 class="project-title">QuantORB – Automated Trading Framework (Nifty 50 Futures & Equities)</h3>
+                  </div>
+                  <div class="project-header-actions">
+                    <a href="https://github.com/AkavarapuTejadutt/QuantORB-Framework" target="_blank" class="btn btn-outline btn-sm github-btn" title="View Source Code on GitHub">
+                      <i class="fa-brands fa-github"></i> GitHub Repository
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <p class="project-description">
+                Architected a 24/7 automated quantitative trading engine in Python executing the <strong>5-minute Opening Range Breakout (ORB)</strong> strategy for Indian markets (Nifty 50 Futures & Equities). Engineered a dual-broker execution layer with <strong>FYERS API v3 & Angel One SmartAPI</strong>, featuring real-time WebSocket tick ingestion, sub-second order dispatch, dynamic 1:4 risk-to-reward management, and crash-resilient state recovery.
+              </p>
+              <div class="project-tech-stack">
+                <span>Python 3.10+</span><span>FYERS API v3</span><span>Angel One SmartAPI</span><span>WebSockets</span><span>Algo Trading</span><span>ORB Strategy</span><span>1:4 R:R</span><span>Event-Driven</span>
+              </div>
+              <div class="feature-bullets">
+                <div class="f-bullet"><i class="fa-solid fa-check"></i> <strong>Dual-Broker Integration:</strong> Unified execution adapter for FYERS API v3 & Angel One with automated TOTP session auth & token caching.</div>
+                <div class="f-bullet"><i class="fa-solid fa-check"></i> <strong>False-Breakout Filtering:</strong> Evaluates 09:15–09:45 IST opening high/low bounds; confirms entries strictly on candle-close, ignoring spurious wicks.</div>
+                <div class="f-bullet"><i class="fa-solid fa-check"></i> <strong>Systematic Risk Management:</strong> Automated 1:4 Risk-to-Reward calculation, prior-candle trailing stop loss, and mandatory 15:10 IST intraday square-off.</div>
+                <div class="f-bullet"><i class="fa-solid fa-check"></i> <strong>Paper vs. Live Execution & Replay:</strong> Simulated tick-level fills with zero capital risk, seamless live market toggle, and historical candle replay engine (<code>replay.py</code>).</div>
+              </div>
+            </div>
+
+            <!-- QuantORB Interactive Strategy & Replay Terminal Column -->
+            <div class="quantorb-terminal-col">
+              <div class="quantorb-terminal" id="quantorb-terminal">
+                <div class="qterm-header">
+                  <div class="qterm-title">
+                    <span class="qterm-dot active"></span>
+                    <i class="fa-solid fa-terminal"></i> QuantORB Live Console
+                  </div>
+                  <div class="qterm-badges">
+                    <span class="qterm-badge mode-badge" id="orb-mode-badge"><i class="fa-solid fa-shield-halved"></i> Paper Trading</span>
+                    <span class="qterm-badge broker-badge" id="orb-broker-badge"><i class="fa-solid fa-plug"></i> FYERS API v3</span>
+                  </div>
+                </div>
+
+                <div class="qterm-dashboard">
+                  <div class="qterm-stat">
+                    <span class="stat-label">SYMBOL</span>
+                    <span class="stat-value highlight">NIFTY26OCTFUT</span>
+                  </div>
+                  <div class="qterm-stat">
+                    <span class="stat-label">ORB RANGE (09:15-09:45)</span>
+                    <span class="stat-value" id="orb-range-val">25,120.00 – 25,185.00</span>
+                  </div>
+                  <div class="qterm-stat">
+                    <span class="stat-label">STRATEGY STATE</span>
+                    <span class="stat-value status-breakout" id="orb-status-val">WAITING FOR BREAKOUT</span>
+                  </div>
+                  <div class="qterm-stat">
+                    <span class="stat-label">NET REALIZED P&L</span>
+                    <span class="stat-value pnl-neutral" id="orb-pnl-val">+₹0.00</span>
+                  </div>
+                </div>
+
+                <div class="qterm-console" id="orb-console">
+                  <div class="console-line"><span class="c-time">[08:55:00 IST]</span> Authenticated with FYERS API v3. Session token cached.</div>
+                  <div class="console-line"><span class="c-time">[09:15:00 IST]</span> WebSocket tick feed connected. Subscribed to Nifty 50 index & futures.</div>
+                  <div class="console-line"><span class="c-time">[09:45:00 IST]</span> Range formed: HIGH = 25,185.00 | LOW = 25,120.00 (Spread: 65.00 pts).</div>
+                  <div class="console-line info"><span class="c-time">[09:45:01 IST]</span> Entry window open until 12:10 IST. Monitoring 5-min candle closes for breakout...</div>
+                </div>
+
+                <div class="qterm-controls">
+                  <button class="btn btn-sm qterm-btn primary-qbtn" id="orb-simulate-btn">
+                    <i class="fa-solid fa-bolt"></i> Simulate Long Breakout
+                  </button>
+                  <button class="btn btn-sm qterm-btn" id="orb-toggle-broker-btn">
+                    <i class="fa-solid fa-repeat"></i> Switch Broker
+                  </button>
+                  <button class="btn btn-sm qterm-btn" id="orb-reset-btn">
+                    <i class="fa-solid fa-arrows-rotate"></i> Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 1: AI Document Q&A using RAG (Flagship GenAI Featured Project) -->
+          <div class="project-card featured-project rag-featured-card">
+            <div class="rag-info-col">
+              <div class="project-header">
+                <div class="project-title-row">
+                  <div>
+                    <span class="project-type"><i class="fa-solid fa-robot"></i> Generative AI & Vector Search</span>
+                    <h3 class="project-title">AI Document Q&A using RAG – Context-Augmented LLM Engine</h3>
+                  </div>
+                  <div class="project-header-actions">
+                    <a href="https://github.com/AkavarapuTejadutt/AI-Document-QA-RAG" target="_blank" class="btn btn-outline btn-sm github-btn" title="View Source Code on GitHub">
+                      <i class="fa-brands fa-github"></i> GitHub Repository
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <p class="project-description">
+                Engineered an enterprise question-answering architecture using <strong>Python, LangChain, and dense vector embeddings</strong>. Applies semantic text chunking, ChromaDB vector indexing, and cosine similarity search to retrieve authoritative document passages and augment LLM prompts—guaranteeing factual precision and eliminating hallucination.
+              </p>
+              <div class="project-tech-stack">
+                <span>Python</span><span>LangChain</span><span>ChromaDB</span><span>Vector Search</span><span>Cosine Similarity</span><span>Prompt Engineering</span><span>LLM APIs</span>
+              </div>
+              <div class="feature-bullets">
+                <div class="f-bullet"><i class="fa-solid fa-check"></i> <strong>Semantic Vector Retrieval:</strong> Encodes documents into high-dimensional embeddings with top-k cosine similarity ranking.</div>
+                <div class="f-bullet"><i class="fa-solid fa-check"></i> <strong>Hallucination Prevention:</strong> Augments LLM generation strictly using retrieved document context with confidence citations.</div>
+                <div class="f-bullet"><i class="fa-solid fa-check"></i> <strong>Interactive Document Assistant:</strong> Live test the indexed knowledge base on the right with sample queries or custom questions.</div>
+              </div>
+              <div class="rag-indexed-badges">
+                <span class="doc-chip"><i class="fa-solid fa-file-pdf"></i> Tejadutt_Resume.pdf</span>
+                <span class="doc-chip"><i class="fa-solid fa-file-code"></i> quantorb_strategy.py</span>
+                <span class="doc-chip"><i class="fa-solid fa-graduation-cap"></i> cbit_academics.json</span>
+                <span class="doc-chip"><i class="fa-solid fa-briefcase"></i> plantdeck_work.md</span>
+              </div>
+            </div>
+
+            <!-- Interactive RAG Sandbox Column -->
+            <div class="rag-terminal-col">
+              <div class="interactive-sandbox" id="rag-sandbox">
+                <div class="sandbox-header">
+                  <div class="rag-chat-title">
+                    <span class="qterm-dot active"></span>
+                    <i class="fa-solid fa-brain"></i> RAG Document Assistant
+                  </div>
+                  <div class="rag-header-actions">
+                    <span class="rag-status-chip"><i class="fa-solid fa-circle-check"></i> 4 Docs Indexed</span>
+                    <button id="rag-clear-btn" class="rag-clear-btn" title="Reset chat history"><i class="fa-solid fa-arrows-rotate"></i> Reset</button>
+                  </div>
+                </div>
+
+                <div class="sandbox-messages" id="rag-chat-window">
+                  <div class="msg system-msg">
+                    <div class="bot-meta">
+                      <span><i class="fa-solid fa-robot"></i> RAG Assistant</span>
+                      <span class="similarity-chip">Index: Ready</span>
+                    </div>
+                    <div>Hello! I have indexed Tejadutt's verified resume, QuantORB trading specs, and technical documentation. Select a quick prompt or type any question below!</div>
+                    <div class="rag-cite"><i class="fa-solid fa-folder-tree"></i> Source: Local Knowledge Vector Store</div>
+                  </div>
+                </div>
+
+                <div class="sandbox-sample-queries">
+                  <button class="sample-btn" data-query="Explain how this RAG pipeline works"><i class="fa-solid fa-diagram-project"></i> How RAG Works</button>
+                  <button class="sample-btn" data-query="What did Tejadutt do during his PlantDeck internship?"><i class="fa-solid fa-briefcase"></i> PlantDeck Work</button>
+                  <button class="sample-btn" data-query="Tell me about the QuantORB trading project"><i class="fa-solid fa-chart-line"></i> QuantORB Algo</button>
+                  <button class="sample-btn" data-query="What is Tejadutt's GPA, college, and degree?"><i class="fa-solid fa-graduation-cap"></i> GPA & College</button>
+                  <button class="sample-btn" data-query="What are Tejadutt's core technical skills?"><i class="fa-solid fa-code"></i> Core Skills</button>
+                </div>
+
+                <div class="sandbox-input-row">
+                  <input type="text" id="rag-input" placeholder="Ask about Tejadutt's projects, RAG architecture, GPA, or skills..." />
+                  <button id="rag-send-btn" class="rag-send-btn" title="Submit query"><i class="fa-solid fa-paper-plane"></i> Ask</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Math AI Tutor Agent -->
+          <div class="project-card">
             <div class="project-header">
               <div class="project-title-row">
                 <div>
@@ -187,7 +338,7 @@
                   <h3 class="project-title">Math Tutor Agent – Step-by-Step AI Solver</h3>
                 </div>
                 <a href="https://github.com/AkavarapuTejadutt/Math_Agent" target="_blank" class="btn btn-outline btn-sm github-btn" title="View Source Code on GitHub">
-                  <i class="fa-brands fa-github"></i> GitHub Repository
+                  <i class="fa-brands fa-github"></i> GitHub
                 </a>
               </div>
             </div>
@@ -201,49 +352,6 @@
               <div class="f-bullet"><i class="fa-solid fa-check"></i> Intelligent multi-step mathematical breakdown logic</div>
               <div class="f-bullet"><i class="fa-solid fa-check"></i> RESTful API backend handling complex algebraic expressions</div>
               <div class="f-bullet"><i class="fa-solid fa-check"></i> Interactive student-focused user interface</div>
-            </div>
-          </div>
-
-          <!-- Project 2: RAG AI Document Q&A -->
-          <div class="project-card">
-            <div class="project-header">
-              <div class="project-title-row">
-                <div>
-                  <span class="project-type"><i class="fa-solid fa-robot"></i> Generative AI & RAG</span>
-                  <h3 class="project-title">AI Document Q&A using RAG</h3>
-                </div>
-                <a href="https://github.com/AkavarapuTejadutt/AI-Document-QA-RAG" target="_blank" class="btn btn-outline btn-sm github-btn" title="View Source Code on GitHub">
-                  <i class="fa-brands fa-github"></i> GitHub
-                </a>
-              </div>
-            </div>
-            <p class="project-description">
-              Engineered a question-answering application using Python, LLM APIs, and Retrieval-Augmented Generation (RAG). Implemented text chunking, document vector indexing, and similarity search for contextually accurate responses.
-            </p>
-            <div class="project-tech-stack">
-              <span>Python</span><span>RAG</span><span>LLM APIs</span><span>Prompt Engineering</span><span>Vector Search</span>
-            </div>
-
-            <!-- Interactive RAG Sandbox Demo -->
-            <div class="interactive-sandbox" id="rag-sandbox">
-              <div class="sandbox-header">
-                <span><i class="fa-solid fa-terminal"></i> Interactive RAG Simulator</span>
-                <span class="status-indicator"><span class="dot green"></span> Context Indexed</span>
-              </div>
-              <div class="sandbox-messages" id="rag-chat-window">
-                <div class="msg system-msg">
-                  <i class="fa-solid fa-robot"></i> <strong>RAG Assistant:</strong> Loaded resume & technical documents into vector index. Select a sample prompt or type your query below!
-                </div>
-              </div>
-              <div class="sandbox-sample-queries">
-                <button class="sample-btn" data-query="What is Tejadutt's GPA and college?">GPA & Degree</button>
-                <button class="sample-btn" data-query="What did Teja do during his PlantDeck internship?">PlantDeck Work</button>
-                <button class="sample-btn" data-query="What skills does Tejadutt have in AI and ML?">AI/ML Skills</button>
-              </div>
-              <div class="sandbox-input-row">
-                <input type="text" id="rag-input" placeholder="Ask a question about Tejadutt's projects or background..." />
-                <button id="rag-send-btn" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i> Ask RAG</button>
-              </div>
             </div>
           </div>
 
@@ -364,108 +472,209 @@
       </div>
     </section>
 
-    <!-- Skills Matrix Section -->
+    <!-- Applied Systems & Proof-of-Work Matrix Section -->
     <section id="skills" class="skills-section">
       <div class="section-container">
         <div class="section-header">
-          <span class="section-tag">TECH STACK</span>
-          <h2 class="section-title">Technical Skills & Tools</h2>
-          <p class="section-subtitle">A comprehensive breakdown of technologies I work with every day.</p>
+          <span class="section-tag">ENGINEERING ECOSYSTEM</span>
+          <h2 class="section-title">Applied Systems & Proof-of-Work Matrix</h2>
+          <p class="section-subtitle">Real architectural implementations and production use-cases across my project ecosystem — without arbitrary percentage bars.</p>
         </div>
 
-        <div class="skills-grid">
-          <!-- Category 1 -->
-          <div class="skill-category-card">
-            <div class="cat-icon"><i class="fa-solid fa-brain"></i></div>
-            <h3>Generative AI & ML</h3>
-            <div class="skill-bars">
-              <div class="skill-item">
-                <div class="skill-info"><span>LLM Concepts & Prompt Engineering</span><span>88%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+        <div class="skills-grid applied-matrix-grid">
+          
+          <!-- Domain 1: Generative AI & Deep Learning -->
+          <div class="skill-category-card matrix-category-card">
+            <div class="category-card-top">
+              <div class="cat-icon cat-purple"><i class="fa-solid fa-brain"></i></div>
+              <div>
+                <h3>Generative AI & Deep Learning</h3>
+                <span class="cat-subtag">Vector Embeddings • RAG • Neural Nets</span>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>Retrieval-Augmented Generation (RAG)</span><span>85%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+            </div>
+            
+            <div class="applied-tech-list">
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-layer-group"></i> Retrieval-Augmented Gen (RAG)</span>
+                  <span class="tech-tag tag-purple">Production Arch</span>
+                </div>
+                <p class="tech-desc">Recursive text chunking (500 tokens, 50 overlap), ChromaDB dense vector indexing & cosine similarity injection eliminating hallucination.</p>
+                <a href="#rag-sandbox" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: AI Document Q&A</a>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>Machine Learning & PyTorch</span><span>82%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 82%;"></div></div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-robot"></i> LLMs & Prompt Engineering</span>
+                  <span class="tech-tag tag-purple">Architecture</span>
+                </div>
+                <p class="tech-desc">Structured system prompts, few-shot conditioning, strict JSON schema output formatting, and context window optimization.</p>
+                <a href="#rag-sandbox" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: RAG Assistant & Math Agent</a>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>Scikit-learn & Model Evaluation</span><span>85%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-chart-area"></i> PyTorch & Deep Learning</span>
+                  <span class="tech-tag tag-purple">Deep Learning</span>
+                </div>
+                <p class="tech-desc">Constructed 1D-CNN architectures for biomedical signal processing, achieving 98.6% arrhythmia classification on the MIT-BIH dataset.</p>
+                <a href="#projects" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: ECG Arrhythmia Classifier</a>
+              </div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-dna"></i> Autoencoders & Scikit-learn</span>
+                  <span class="tech-tag tag-purple">R&D / ML</span>
+                </div>
+                <p class="tech-desc">Deep latent autoencoder models trained on GSE183947 RNA-Seq data with GridSearchCV hyperparameter tuning (94.23% accuracy).</p>
+                <a href="#projects" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: RNA-Seq Autoencoder</a>
               </div>
             </div>
           </div>
 
-          <!-- Category 2 -->
-          <div class="skill-category-card">
-            <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
-            <h3>Programming Languages</h3>
-            <div class="skill-bars">
-              <div class="skill-item">
-                <div class="skill-info"><span>Python</span><span>90%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+          <!-- Domain 2: Quantitative Finance & Algorithmic Trading -->
+          <div class="skill-category-card matrix-category-card">
+            <div class="category-card-top">
+              <div class="cat-icon cat-emerald"><i class="fa-solid fa-chart-line"></i></div>
+              <div>
+                <h3>Quantitative Finance & Trading</h3>
+                <span class="cat-subtag">Broker APIs • WebSockets • Risk Systems</span>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>JavaScript (ES6+) / TypeScript</span><span>85%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+            </div>
+
+            <div class="applied-tech-list">
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-bolt"></i> FYERS API v3 & Angel One</span>
+                  <span class="tech-tag tag-emerald">Live Broker Engine</span>
+                </div>
+                <p class="tech-desc">Dual-broker execution layer with automated TOTP session authentication, token caching, sub-second order dispatch & failover recovery.</p>
+                <a href="#quantorb-terminal" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: QuantORB Framework</a>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>SQL (MySQL, PostgreSQL)</span><span>84%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 84%;"></div></div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-clock"></i> 5-Min Opening Range Breakout</span>
+                  <span class="tech-tag tag-emerald">Trading Strategy</span>
+                </div>
+                <p class="tech-desc">09:15–09:45 IST high/low price discovery bounds, volume-spread validation, and strict candle-close breakout trigger logic.</p>
+                <a href="#quantorb-terminal" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: QuantORB Framework</a>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>Java</span><span>78%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 78%;"></div></div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-tower-broadcast"></i> Real-Time WebSocket Streaming</span>
+                  <span class="tech-tag tag-emerald">Event-Driven</span>
+                </div>
+                <p class="tech-desc">Tick-by-tick market data ingestion for Nifty 50 futures & equities, non-blocking asynchronous event loop, and live price monitoring.</p>
+                <a href="#quantorb-terminal" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: QuantORB Framework</a>
+              </div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-shield-halved"></i> Systematic 1:4 Risk-to-Reward</span>
+                  <span class="tech-tag tag-emerald">Risk Management</span>
+                </div>
+                <p class="tech-desc">Mathematical risk calculation, automated prior-candle trailing stop loss, fixed lot sizing, and mandatory 15:10 IST intraday square-off.</p>
+                <a href="#quantorb-terminal" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: QuantORB Framework</a>
               </div>
             </div>
           </div>
 
-          <!-- Category 3 -->
-          <div class="skill-category-card">
-            <div class="cat-icon"><i class="fa-solid fa-laptop-code"></i></div>
-            <h3>Web & API Engineering</h3>
-            <div class="skill-bars">
-              <div class="skill-item">
-                <div class="skill-info"><span>React.js & FastAPI</span><span>84%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 84%;"></div></div>
+          <!-- Domain 3: Core Languages & Backend Engineering -->
+          <div class="skill-category-card matrix-category-card">
+            <div class="category-card-top">
+              <div class="cat-icon cat-cyan"><i class="fa-solid fa-code"></i></div>
+              <div>
+                <h3>Core Languages & Backends</h3>
+                <span class="cat-subtag">High-Performance Runtime • Microservices</span>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>RESTful APIs & JSON</span><span>88%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+            </div>
+
+            <div class="applied-tech-list">
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-brands fa-python"></i> Python 3.10+</span>
+                  <span class="tech-tag tag-cyan">Primary Daily Stack</span>
+                </div>
+                <p class="tech-desc">Object-oriented architecture, typing annotations, asyncio concurrency, threading, and mathematical vectorization across all repositories.</p>
+                <a href="#projects" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: All Core Systems</a>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>HTML5 & CSS3 / Modern Styling</span><span>90%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-server"></i> FastAPI & RESTful APIs</span>
+                  <span class="tech-tag tag-cyan">Microservices</span>
+                </div>
+                <p class="tech-desc">Asynchronous endpoints, Pydantic schema validation, CORS security, request routing, and mathematical evaluation microservices.</p>
+                <a href="#projects" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: Math Tutor AI Agent</a>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>Debugging & Software Testing</span><span>86%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 86%;"></div></div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-brands fa-js"></i> JavaScript (ES6+) & TypeScript</span>
+                  <span class="tech-tag tag-cyan">Full-Stack Web</span>
+                </div>
+                <p class="tech-desc">DOM event pipelines, asynchronous Fetch API, state stores, strongly typed interfaces, and reactive frontend logic.</p>
+                <a href="#projects" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: Web Portals & Simulators</a>
+              </div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-database"></i> SQL (PostgreSQL & MySQL)</span>
+                  <span class="tech-tag tag-cyan">Data Architecture</span>
+                </div>
+                <p class="tech-desc">Normalized relational schema design, indexed transaction records, complex JOIN queries, and persistent trade journal logging.</p>
+                <a href="#about" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: Database Systems & CBIT</a>
               </div>
             </div>
           </div>
 
-          <!-- Category 4 -->
-          <div class="skill-category-card">
-            <div class="cat-icon"><i class="fa-solid fa-toolbox"></i></div>
-            <h3>Tools & Data Processing</h3>
-            <div class="skill-bars">
-              <div class="skill-item">
-                <div class="skill-info"><span>Git & GitHub</span><span>88%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+          <!-- Domain 4: Web Platforms, Data Science & Tooling -->
+          <div class="skill-category-card matrix-category-card">
+            <div class="category-card-top">
+              <div class="cat-icon cat-amber"><i class="fa-solid fa-toolbox"></i></div>
+              <div>
+                <h3>Web Platforms, Data & Tools</h3>
+                <span class="cat-subtag">Modern UI • Data Crunching • CI/CD</span>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>Pandas & NumPy</span><span>85%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+            </div>
+
+            <div class="applied-tech-list">
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-brands fa-react"></i> React.js & Modern UI</span>
+                  <span class="tech-tag tag-amber">Frontend Systems</span>
+                </div>
+                <p class="tech-desc">Component hierarchies, custom hooks, reactive state workflows, and responsive cross-browser web interfaces.</p>
+                <a href="#experience" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: PlantDeck & Farmer Portal</a>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>Power BI & Data Visualization</span><span>80%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-table"></i> Pandas & NumPy</span>
+                  <span class="tech-tag tag-amber">Data Wrangling</span>
+                </div>
+                <p class="tech-desc">Vectorized time-series analysis (ORB candle calculations, spread & ATR metrics), missing data imputation, and matrix computations.</p>
+                <a href="#projects" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: QuantORB & ML Repos</a>
               </div>
-              <div class="skill-item">
-                <div class="skill-info"><span>VS Code, Postman & Excel</span><span>90%</span></div>
-                <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-brands fa-git-alt"></i> Git, GitHub & DevOps</span>
+                  <span class="tech-tag tag-amber">Workflow & CI/CD</span>
+                </div>
+                <p class="tech-desc">Feature branching, atomic commits, pull request workflows, documentation standards, and multi-repo open source management.</p>
+                <a href="https://github.com/AkavarapuTejadutt" target="_blank" class="tech-proof-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i> Proven in: 7+ Public GitHub Repos</a>
+              </div>
+
+              <div class="applied-tech-item">
+                <div class="tech-item-header">
+                  <span class="tech-name"><i class="fa-solid fa-chart-pie"></i> Power BI & Visualization</span>
+                  <span class="tech-tag tag-amber">Analytics</span>
+                </div>
+                <p class="tech-desc">Interactive dashboard engineering, DAX aggregations, data modeling, KPI tracking, and analytical reporting.</p>
+                <a href="#about" class="tech-proof-badge"><i class="fa-solid fa-check-circle"></i> Proven in: Business Intelligence Projects</a>
               </div>
             </div>
           </div>
@@ -648,7 +857,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="audio_effects.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js?v=vfx_cgx_3"></script>
 </body>
 </html>
